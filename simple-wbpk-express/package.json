@@ -5,8 +5,10 @@
     "license": "MIT",
     "scripts": {
         "run": "webpack",
+        "nodemer": "nodemon ./dist/app.bundle.js",
         "start": "node ./dist/app.bundle.js",
-        "chain": "npm run-script run && npm run-script start"
+        "chain": "npm run-script run && npm run-script start",
+        "chain-mon": "npm run-script run && npm run-script nodemer"
     },
     "dependencies": {
         "express": "^4.16.2"

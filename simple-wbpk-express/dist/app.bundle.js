@@ -68,13 +68,19 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-var _express=__webpack_require__(1);var _express2=_interopRequireDefault(_express);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var app=(0,_express2.default)();app.get('/',function(req,res){res.send('Da FOOQ is goiNG in ON');});app.listen(4000,function(){console.log('We are now connected to the port 4000!');});
+var _express=__webpack_require__(1);var _express2=_interopRequireDefault(_express);var _path=__webpack_require__(2);var _path2=_interopRequireDefault(_path);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var app=(0,_express2.default)();app.get('/',function(req,res){res.send('Da FOOQ is goiNG in ON');});app.get('/test.html',function(req,res){res.sendFile('test.html',{root:'./paths/'});});app.listen(4000,function(){console.log('We are now connected to the port 4000!');});
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
 
 module.exports = require("express");
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = require("path");
 
 /***/ })
 /******/ ]);
