@@ -3,12 +3,18 @@
     "version": "1.0.0",
     "main": "app.js",
     "license": "MIT",
+    "scripts": {
+        "run": "webpack",
+        "start": "node ./dist/app.bundle.js",
+        "chain": "npm run-script run && npm run-script start"
+    },
     "dependencies": {
         "express": "^4.16.2"
     },
     "devDependencies": {
         "babel-cli": "^6.26.0",
         "babel-preset-env": "^1.6.1",
-        "webpack": "^3.10.0"
+        "webpack": "^3.10.0",
+        "webpack-node-externals": "^1.6.0"
     }
 }
